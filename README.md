@@ -93,6 +93,9 @@ npm install axios aws-sdk
 First, we will create a "Strava" class that will be used in our Strava service. The class will contain a method that will be used to authenticate with the Strava API. We will use the axios library to make the request to the Strava API. We will use the aws-sdk library to interact with AWS Secrets Manager. We will use Secrets Manager to store our Strava client ID and client secret. We will use the Strava client ID and client secret to authenticate with the Strava API.
 
 The User interface will be defined in the interfaces directory since this is an important interface that will be used throughout the application. The User interface will be used to store the athlete ID and access token for a user. The athlete ID and access token will be used to authenticate with the Strava API.
+
+A quick note about Strava's Authentication before we get started. This tutorial assumes that all of our users have authorized our application to access their Strava data. All we need is their refresh token or access token, if not expired. If you are unfamiliar with Strava's authentication process, please read the following documentation: https://developers.strava.com/docs/authentication/.
+
 ```typescript
 /**
  * User interface
