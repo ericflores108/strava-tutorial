@@ -6,11 +6,11 @@ I want to create a backend app that can be used to loop through my Strava users 
 
 There will be two Lambda functions, one that will be triggered by a CloudWatch event, and the other will be triggered by an API Gateway endpoint. The CloudWatch event will be triggered every day at 12:00 AM, and will loop through the DDB table and pull the total miles ran for each user. If a user has met their goal, an email will be sent to them. The API Gateway endpoint will be triggered by a GET request, and will return the total miles ran for all users, and the total goal set for all users.
 
-## Prerequisites
+## Goal of this tutorial
 
 There are important principles I hope to demonstrate in this project. If you do things differently or have a better way of doing things, please let me know! I am still learning, and I am always open to new ideas.
 
-  1. Error handling
+  1. Error handling (consistency, logging, try/catch, etc.)
   2. DRY (Don't Repeat Yourself) code - when to use it and when not to use it
   3. Clean code that is easy to read and understand. I will leverage TypeScript (types and comments) to help with this.
 
